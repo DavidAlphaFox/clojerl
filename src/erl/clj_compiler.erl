@@ -255,7 +255,7 @@ compile_string(Src, Opts0, Env0) when is_binary(Src) ->
   %% Resolve function to be used (normal/timed)
   AnnEmitEval = analyze_emit_eval_fun(Opts),
   Fun         = module_fun(Opts),
-
+  %% 对clje的编译在此处进行
   CompileFun =
     fun() ->
         try

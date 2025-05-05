@@ -125,7 +125,7 @@ read_fold(Fun, Src, Opts0, Env) ->
   Opts    = Opts0#{?OPT_EOF => ok},
   State   = new_state(Src, Env, Opts),
   ReadFun = read_fun(Opts),
-  ok = clj_rt:reset_id(),
+  ok = clj_rt:reset_id(), %% 重置ID
   read_fold_loop(Fun, ReadFun, State).
 
 %%------------------------------------------------------------------------------
