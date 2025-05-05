@@ -125,8 +125,8 @@ read_fold(Fun, Src, Opts0, Env) ->
   Opts    = Opts0#{?OPT_EOF => ok},
   State   = new_state(Src, Env, Opts),
   ReadFun = read_fun(Opts),
-  ok = clj_rt:reset_id(), %% 重置ID
-  read_fold_loop(Fun, ReadFun, State).
+  ok = clj_rt:reset_id(), %% 重置ID,将Erlang进程中存储的$__gensym_count__$进行重置
+  read_fold_loop(Fun, ReadFun, State). %% 逐行读取并完成编译
 
 %%------------------------------------------------------------------------------
 %% Internal functions
