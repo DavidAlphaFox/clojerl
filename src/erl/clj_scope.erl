@@ -19,7 +19,7 @@
         , to_map/2
         , values/1
         ]).
-
+%% 作用域定义
 -type scope() :: #{ parent   => scope() | ?NIL
                   , mappings => map()
                   }.
@@ -33,7 +33,7 @@ new() -> new(?NIL).
 %% @doc Creates a scope with an assigned parent.
 -spec new(scope() | ?NIL) -> scope().
 new(Parent) ->
- #{ parent   => Parent
+ #{ parent   => Parent %% 上一个层级
   , mappings => #{}
   }.
 
@@ -95,15 +95,15 @@ do_to_map(_, Map, ?NIL) ->
 do_to_map(Fun, Map, #{parent := Parent, mappings := Mappings}) ->
   Mappings1 = maps:map(Fun, Mappings),
   do_to_map(Fun, maps:merge(Mappings1, Map), Parent).
-
+%% 这个是变量查找作用域的底层逻辑
 %% @private
 -spec do_get(any(), any(), scope() | ?NIL) -> any().
 do_get(_, Default, ?NIL) ->
   Default;
 do_get(Key, Default, Scope = #{mappings := Mappings}) ->
   case Mappings of
-    #{Key := Value} -> Value;
-    _ -> do_get(Key, Default, parent(Scope))
+    #{Key := Value} -> Value; %% 在本层级别进行查找，并找到
+    _ -> do_get(Key, Default, parent(Scope)) %% 本层级并未找到，向上一个层级寻找
   end.
 
 %% @private
