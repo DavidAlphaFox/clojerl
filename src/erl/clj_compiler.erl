@@ -159,18 +159,18 @@ no_warn_dynamic_var_name(Env) ->
 %%------------------------------------------------------------------------------
 %% Helper functions
 %%------------------------------------------------------------------------------
-
+%% 将字符串编译成代码
 %% @doc Compile code from a string.
 %%
 %% Return the modified `clj_env:env()'.
 -spec string(binary(), options(), clj_env:env()) -> clj_env:env().
 string(Src, Opts, Env) when is_binary(Src) ->
-  ProcDict = erlang:get(),
+  ProcDict = erlang:get(), %% 得到当前进程的进程字典
   DoCompile = fun() ->
-                  copy_proc_dict(ProcDict),
-                  compile_string(Src, Opts, Env)
+                  copy_proc_dict(ProcDict), %% 将进程字典复制到新的进程中
+                  compile_string(Src, Opts, Env) %% 执行真正的编译操作
               end,
-  run_monitored(DoCompile).
+  run_monitored(DoCompile). %% 代码将会在另外一个进程中进行执行
 
 -spec timed_string(binary(), options(), clj_env:env()) ->
   compiled_modules().
@@ -233,13 +233,13 @@ run_monitored(Fun) ->
     {'DOWN', Ref, _, _, Info} ->
       throw(Info)
   end.
-
+%% 将字符串编译成代码，这里面的字符串是list，不是binary
 -spec compile_string(binary(), options(), clj_env:env()) -> no_return().
 compile_string(Src, Opts0, Env0) when is_binary(Src) ->
   Opts     = maps:merge(default_options(), Opts0),
 
   #{ clj_flags   := CljFlags
-   , reader_opts := RdrOpts0
+   , reader_opts := RdrOpts0 %% 默认是个空的maps
    , time        := Time
    } = Opts,
 
@@ -250,7 +250,7 @@ compile_string(Src, Opts0, Env0) when is_binary(Src) ->
                  , eval          => ?NIL
                  , location      => #{file => File}
                  },
-  Env1        = clj_env:push(Mapping, Env0),
+  Env1        = clj_env:push(Mapping, Env0), %% 更新文件和环境信息
 
   %% Resolve function to be used (normal/timed)
   AnnEmitEval = analyze_emit_eval_fun(Opts),
