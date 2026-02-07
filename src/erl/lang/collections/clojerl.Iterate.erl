@@ -1,3 +1,7 @@
+%% @doc 迭代序列实现
+%% @desc
+%% - 功能：通过函数递归应用生成无限惰性序列，每个元素是前一个元素应用函数的结果
+%% - 依赖：ICounted, IColl, IEquiv, IHash, IMeta, IReduce, ISeq, ISeqable, ISequential, IStringable
 -module('clojerl.Iterate').
 
 -include("clojerl.hrl").

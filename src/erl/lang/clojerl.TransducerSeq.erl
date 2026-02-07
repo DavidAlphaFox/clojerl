@@ -1,3 +1,10 @@
+%% @doc TransducerSeq 模块 - 转换器序列实现
+%% @desc
+%% - 功能：实现基于转换器（transducer）的惰性序列。通过应用转换器函数
+%%   逐步处理源集合，支持高效的数据转换和过滤操作。使用进程字典缓存
+%%   中间结果，支持单值和多值模式。
+%% - 依赖：实现 'clojerl.IEquiv', 'clojerl.ISeq', 'clojerl.ISeqable',
+%%   'clojerl.ISequential', 'clojerl.IStringable' 协议
 %% @private
 -module('clojerl.TransducerSeq').
 

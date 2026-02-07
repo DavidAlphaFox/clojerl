@@ -1,12 +1,11 @@
-%% @doc Clojerl emitter.
-%%
-%% Emits Core Erlang from the expressions it receives from the
-%% analyzer.
-%%
-%% This is the third and last step in the compilation process.
-%%
-%% The generated Core Erlang modules are maintained and updated in
-%% memory through the usage of `clj_module'.
+%% @doc Clojerl代码发射器
+%% @desc
+%% 功能: 将分析器生成的表达式AST转换为Core Erlang代码
+%%       这是编译过程的第三步也是最后一步
+%%       处理各种Clojure构造：def、fn、let、case、loop、deftype、
+%%       defprotocol、extend等，生成对应的Core Erlang AST
+%%       生成的模块通过clj_module在内存中维护和更新
+%% 依赖: 依赖cerl模块生成Core Erlang AST，依赖clj_module管理模块
 -module(clj_emitter).
 
 -include("clojerl.hrl").

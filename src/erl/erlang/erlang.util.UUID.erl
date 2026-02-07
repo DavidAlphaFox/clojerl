@@ -1,3 +1,9 @@
+%% @doc UUID（通用唯一标识符）工具
+%% @desc
+%% - 功能：生成和验证符合 RFC 4122 标准的 UUID
+%% - 特性：支持版本 4 随机 UUID 的生成
+%% - 用途：生成唯一的标识符，确保分布式系统中的唯一性
+
 -module('erlang.util.UUID').
 
 -include("clojerl.hrl").

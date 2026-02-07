@@ -1,3 +1,8 @@
+%% @doc 有序集合
+%% @desc
+%% - 功能：实现有序集合，按元素的排序顺序存储，确保元素唯一性
+%% - 依赖：实现 ICounted、IColl、IEquiv、IFn、IHash、ILookup、IMeta、
+%%         ISet、ISeqable、ISorted、IStringable 协议
 -module('clojerl.SortedSet').
 
 -include("clojerl.hrl").

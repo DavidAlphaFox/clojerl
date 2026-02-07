@@ -1,3 +1,10 @@
+%% @doc 回退读取器实现
+%% @desc
+%% - 功能：实现支持字符回退的读取器
+%%   - 包装任意 IReader 实现并提供回退功能
+%%   - 维护内部缓冲区存储回退的字符
+%%   - 实现 IO 服务器协议以支持 Erlang IO 操作
+%%   - 支持检测是否位于行首（at_line_start）
 -module('erlang.io.PushbackReader').
 
 -include("clojerl.hrl").

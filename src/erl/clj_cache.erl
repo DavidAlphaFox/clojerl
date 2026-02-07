@@ -1,3 +1,8 @@
+%% @doc 通用缓存模块
+%% @desc
+%% - 功能：实现 `gen_server' 行为，在初始化时创建内存 ETS 表存储缓存值
+%% - 功能：优化对特定值的访问，例如避免重新计算模块相关信息
+%% - 功能：从内存中获取二进制 BEAM 代码，而不是从文件块中查找
 %% @doc Generic cache module.
 %%
 %% Implements the `gen_server' behaviour and on initialization creates

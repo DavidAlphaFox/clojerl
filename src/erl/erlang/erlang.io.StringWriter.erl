@@ -1,3 +1,10 @@
+%% @doc 字符串写入器实现
+%% @desc
+%% - 功能：实现向字符串写入数据的写入器
+%%   - 将数据写入内部字符串缓冲区
+%%   - 实现 IO 服务器协议以支持 Erlang IO 操作
+%%   - 支持删除指定范围的内容
+%%   - 支持获取字符串长度和内容
 -module('erlang.io.StringWriter').
 
 -include("clojerl.hrl").

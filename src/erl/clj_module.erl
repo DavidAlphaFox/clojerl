@@ -1,3 +1,9 @@
+%% @doc Clojerl 编译模块管理模块
+%% @desc
+%% - 功能：维护正在编译的模块的 Core Erlang 表示
+%% - 功能：注册新模块并在处理每个表单时添加或更新函数
+%% - 功能：提供模块上下文管理和函数调用替换功能
+%% - 功能：管理模块映射、别名、导出和属性
 %% @doc Clojerl compilation module.
 %%
 %% Keeps the Core Erlang representation for the modules being

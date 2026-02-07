@@ -1,3 +1,7 @@
+%% @doc 断言错误异常模块
+%% @desc
+%% - 功能：当程序断言失败时抛出此异常
+%% - 用于表示程序逻辑中的前置条件、后置条件或不变式被违反
 -module('clojerl.AssertionError').
 
 -include("clojerl.hrl").

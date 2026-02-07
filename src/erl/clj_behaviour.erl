@@ -1,3 +1,8 @@
+%% @doc Clojerl 行为检查模块
+%% @desc
+%% - 功能：检查模块是否正确实现了其指定的 behaviour
+%% - 功能：对 Core Erlang 模块执行与 Erlang behaviour 相同的检查
+%% - 功能：在发现问题时显示警告信息
 %% @doc Clojerl behaviour checks.
 %%
 %% Implements the same checks done to Erlang modules when they specify

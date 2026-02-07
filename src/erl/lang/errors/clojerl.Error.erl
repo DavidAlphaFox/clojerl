@@ -1,3 +1,7 @@
+%% @doc 基础错误异常模块
+%% @desc
+%% - 功能：Clojerl 的基础错误类，所有其他错误类型的父类
+%% - 提供错误消息的基本功能，用于一般性错误情况
 -module('clojerl.Error').
 
 -include("clojerl.hrl").

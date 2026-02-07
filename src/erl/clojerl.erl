@@ -1,7 +1,8 @@
-%% @doc Clojerl API.
-%%
-%% User-friendly API to interact with Clojerl from other BEAM
-%% languages.
+%% @doc Clojerl用户友好的API接口
+%% @desc
+%% 功能: 提供从其他BEAM语言(Erlang、Elixir等)与Clojerl交互的API
+%%       支持启动Clojerl应用、读取Clojure代码、访问Var等操作
+%% 依赖: 依赖clojerl应用的启动和初始化
 -module(clojerl).
 
 -include("clojerl_int.hrl").

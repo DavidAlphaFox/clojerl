@@ -1,3 +1,11 @@
+%% @doc Clojure Reader 标签字面量数据结构
+%% @desc
+%% - 功能：实现 Clojure reader 的标签字面量（Tagged Literal）功能
+%%   - 支持 #tag/value 语法的数据标签读取
+%%   - 允许自定义数据字面量的读取和解析
+%%   - 提供扩展机制用于处理自定义数据类型
+%% - 用途：用于扩展 Clojure reader 以支持自定义数据字面量
+%% @end
 %% @private
 -module('clojerl.reader.TaggedLiteral').
 

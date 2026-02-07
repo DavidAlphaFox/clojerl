@@ -1,3 +1,10 @@
+%% @doc ProcessVal 模块 - 进程字典值容器
+%% @desc
+%% - 功能：提供基于 Erlang 进程字典的值存储机制。每个 ProcessVal 实例
+%%   在进程字典中存储值，提供快速的进程本地状态访问。支持重置和销毁操作。
+%%   适用于需要进程隔离状态的场景。
+%% - 依赖：实现 'clojerl.IDeref', 'clojerl.IEquiv', 'clojerl.IHash',
+%%   'clojerl.IStringable' 协议
 -module('clojerl.ProcessVal').
 
 -include("clojerl.hrl").

@@ -1,3 +1,18 @@
+%% @doc Clojure 惰性序列模块
+%% @desc
+%% - 功能：实现惰性求值序列，只在需要时计算序列内容
+%% - 依赖：
+%%   - 'clojerl.ICounted' - 计数协议
+%%   - 'clojerl.IColl' - 集合协议
+%%   - 'clojerl.IEquiv' - 等值比较协议
+%%   - 'clojerl.IEncodeErlang' - Erlang 编码协议
+%%   - 'clojerl.IHash' - 哈希协议
+%%   - 'clojerl.IMeta' - 元数据协议
+%%   - 'clojerl.IReduce' - 归约协议
+%%   - 'clojerl.ISeq' - 序列协议
+%%   - 'clojerl.ISequential' - 顺序集合协议
+%%   - 'clojerl.ISeqable' - 可序列化协议
+%%   - 'clojerl.IStringable' - 字符串转换协议
 -module('clojerl.LazySeq').
 
 -include("clojerl.hrl").

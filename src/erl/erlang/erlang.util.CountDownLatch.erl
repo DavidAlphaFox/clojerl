@@ -1,4 +1,9 @@
-%% @doc A synchronization aid that allows one or more processes to
+%% @doc 倒计时锁存器 - 同步辅助工具
+%% @desc
+%% - 功能：允许一个或多个进程等待，直到在其他进程中执行的一组操作完成
+%% - 用途：用于协调 clojerl.Agent 的同步操作
+%%
+%% A synchronization aid that allows one or more processes to
 %% wait until a set of operations being performed in other processes
 %% completes. Used to coordinate `clojerl.Agent's.
 

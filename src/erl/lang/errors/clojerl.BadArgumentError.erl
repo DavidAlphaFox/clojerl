@@ -1,3 +1,7 @@
+%% @doc 错误参数异常模块
+%% @desc
+%% - 功能：当函数接收到无效或格式错误的参数时抛出此异常
+%% - 用于参数类型、格式或取值范围不符合预期的情况
 -module('clojerl.BadArgumentError').
 
 -include("clojerl.hrl").

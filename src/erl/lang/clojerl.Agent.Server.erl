@@ -1,6 +1,8 @@
-%% @doc Server process that creates and maintains an ETS table with
-%% the Clojure Agents information.
+%% @doc 服务器进程，负责创建和维护存储 Clojure Agent 信息的 ETS 表。
 %% @private
+%% @desc
+%% 功能: 管理 Agent 的生命周期，维护 ETS 表存储所有 Agent 的状态信息
+%% 依赖: gen_server 行为模式
 -module('clojerl.Agent.Server').
 
 -include("clojerl_int.hrl").

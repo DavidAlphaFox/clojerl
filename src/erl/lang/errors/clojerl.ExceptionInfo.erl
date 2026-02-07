@@ -1,3 +1,8 @@
+%% @doc 带附加信息的异常模块
+%% @desc
+%% - 功能：携带额外数据和原因信息的异常类
+%% - 除了基本错误消息外，还包含自定义数据（data）和因果链（cause）
+%% - 用于需要传递更多上下文信息的异常情况
 -module('clojerl.ExceptionInfo').
 
 -include("clojerl.hrl").

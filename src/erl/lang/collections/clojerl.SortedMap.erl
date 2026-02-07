@@ -1,3 +1,8 @@
+%% @doc 有序映射
+%% @desc
+%% - 功能：实现有序键值对映射，按键的排序顺序存储和访问元素
+%% - 依赖：实现 IAssociative、ICounted、IColl、IEquiv、IFn、IHash、IKVReduce、
+%%         ILookup、IMap、IMeta、ISeqable、ISorted、IStringable 协议
 -module('clojerl.SortedMap').
 
 -compile({no_auto_import, [{apply, 2}]}).

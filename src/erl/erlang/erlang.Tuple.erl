@@ -1,3 +1,8 @@
+%% @doc Erlang Tuple 类型的 Clojure 包装器
+%% @desc
+%% - 功能：为 Erlang tuple 提供 Clojure 接口，实现多个协议
+%% - 作用：使 Erlang tuple 可以在 Clojerl 环境中作为索引序列使用
+%% - 特性：支持元素访问、序列转换、等价比较等操作
 -module('erlang.Tuple').
 
 -include("clojerl.hrl").

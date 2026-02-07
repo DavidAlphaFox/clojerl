@@ -1,3 +1,7 @@
+%% @doc 循环序列实现
+%% @desc
+%% - 功能：将给定序列无限循环重复，生成永不终止的惰性序列
+%% - 依赖：ICounted, IColl, IEquiv, IHash, IMeta, IReduce, ISeq, ISeqable, ISequential, IStringable
 -module('clojerl.Cycle').
 
 -include("clojerl.hrl").

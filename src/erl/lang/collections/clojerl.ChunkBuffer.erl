@@ -1,4 +1,7 @@
-%% @doc ChunkBuffer is used when handling chunked seqs.
+%% @doc 分块缓冲区
+%% @desc
+%% - 功能：用于处理分块序列的缓冲区，提供添加元素、生成块和计数功能
+%% - 依赖：作为内部辅助模块，用于构建 TupleChunk
 %% @private
 -module('clojerl.ChunkBuffer').
 

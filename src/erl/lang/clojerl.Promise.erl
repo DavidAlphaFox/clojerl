@@ -1,3 +1,11 @@
+%% @doc Promise 模块 - 延迟计算和异步结果容器
+%% @desc
+%% - 功能：实现 Clojure 的 Promise 类型，提供可以异步交付值的容器。
+%%   支持阻塞和非阻塞的解引用操作，可以检查是否已实现（realized），
+%%   以及通过 deliver 方法设置值。使用 gen_server 管理状态。
+%% - 依赖：实现 'erlang.io.ICloseable', 'clojerl.IBlockingDeref',
+%%   'clojerl.IDeref', 'clojerl.IEquiv', 'clojerl.IHash',
+%%   'clojerl.IPending', 'clojerl.IStringable' 协议
 -module('clojerl.Promise').
 
 -include("clojerl.hrl").

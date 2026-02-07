@@ -1,4 +1,8 @@
 %% @private
+%% @doc Tuple 分块实现
+%% @desc
+%% - 功能：将 Erlang tuple 封装为可分块的数据结构，为 ChunkedSeq 提供分块存储能力
+%% - 依赖：实现 ICounted, IChunk, IEquiv, IHash, IIndexed, IReduce 协议
 -module('clojerl.TupleChunk').
 
 -include("clojerl.hrl").

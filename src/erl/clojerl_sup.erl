@@ -1,5 +1,10 @@
 %% @private
-%% @doc Clojerl OTP supervisor.
+%% @doc Clojerl OTP监督者模块
+%% @desc
+%% 功能: 实现OTP supervisor行为，管理Clojerl应用的子进程
+%%       监督和管理Namespace、Module、Cache、Agent、Atom、Delay等进程
+%%       使用one_for_one重启策略
+%% 依赖: 实现 supervisor 行为
 -module(clojerl_sup).
 -behavior(supervisor).
 

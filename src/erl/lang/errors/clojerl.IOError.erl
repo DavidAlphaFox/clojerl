@@ -1,3 +1,7 @@
+%% @doc 输入输出错误异常模块
+%% @desc
+%% - 功能：当发生输入输出操作失败时抛出此异常
+%% - 用于文件读写、网络通信等 I/O 操作中的错误情况
 -module('clojerl.IOError').
 
 -include("clojerl.hrl").

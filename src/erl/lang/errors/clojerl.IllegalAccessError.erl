@@ -1,3 +1,7 @@
+%% @doc 非法访问错误异常模块
+%% @desc
+%% - 功能：当尝试非法访问受保护资源或违反访问权限时抛出此异常
+%% - 用于表示对私有成员、受限资源的未授权访问
 -module('clojerl.IllegalAccessError').
 
 -include("clojerl.hrl").

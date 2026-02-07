@@ -1,4 +1,9 @@
-%% @doc A very simple and basic implementation of a synchronization
+%% @doc 循环栅栏 - 同步辅助工具
+%% @desc
+%% - 功能：允许一组线程相互等待，直到到达共同的屏障点
+%% - 用途：实现简单的线程同步机制
+%%
+%% A very simple and basic implementation of a synchronization
 %% aid that allows a set of threads to all wait for each other to
 %% reach a common barrier point.
 

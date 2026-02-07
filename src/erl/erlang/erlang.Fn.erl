@@ -1,3 +1,7 @@
+%% @doc Erlang 函数类型的 Clojure 包装器
+%% @desc
+%% - 功能：为 Erlang 函数提供 Clojure 接口，实现 IFn、IHash 和 IStringable 协议
+%% - 作用：使 Erlang 函数可以在 Clojerl 环境中作为可调用对象使用
 -module('erlang.Fn').
 
 -compile({no_auto_import, [{apply, 2}]}).

@@ -1,4 +1,9 @@
 %% @private
+%% @doc Vector 的分块序列实现
+%% @desc
+%% - 功能：为 Vector 提供基于分块(chunk)的序列视图，用于高效的顺序访问和归约操作
+%% - 依赖：实现 ICounted, IColl, IChunkedSeq, IEquiv, IEncodeErlang, IHash,
+%%         IMeta, IReduce, ISeq, ISequential, ISeqable, IStringable 协议
 -module('clojerl.Vector.ChunkedSeq').
 
 -include("clojerl.hrl").

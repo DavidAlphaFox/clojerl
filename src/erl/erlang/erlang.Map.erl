@@ -1,3 +1,8 @@
+%% @doc Erlang Map 类型的 Clojure 包装器
+%% @desc
+%% - 功能：为 Erlang map 提供完整的 Clojure 映射接口，实现多个协议
+%% - 作用：使 Erlang map 可以在 Clojerl 环境中作为关联数据结构使用
+%% - 特性：支持键值存储、查询、遍历、函数调用等操作
 -module('erlang.Map').
 
 -include("clojerl.hrl").

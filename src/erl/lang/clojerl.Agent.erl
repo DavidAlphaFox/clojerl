@@ -1,4 +1,15 @@
-%% @doc Clojure Agent.
+%% @doc Clojure Agent - 基于 Erlang gen_server 实现的状态管理容器。
+%% @desc
+%% 功能: 实现 Clojure Agent，提供独立的状态管理，支持异步动作派发和状态更新
+%% 依赖:
+%%   - gen_server 行为模式
+%%   - 'erlang.io.ICloseable' 协议
+%%   - 'clojerl.IDeref' 协议
+%%   - 'clojerl.IEquiv' 协议
+%%   - 'clojerl.IHash' 协议
+%%   - 'clojerl.IMeta' 协议
+%%   - 'clojerl.IReference' 协议
+%%   - 'clojerl.IStringable' 协议
 -module('clojerl.Agent').
 
 -include("clojerl.hrl").

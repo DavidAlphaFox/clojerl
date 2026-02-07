@@ -1,3 +1,9 @@
+%% @doc Clojerl 发射器模式处理工具模块
+%% @desc
+%% - 功能：处理 Clojerl 发射器中的模式匹配
+%% - 功能：生成适用于所有模式的保护条件
+%% - 功能：转换模式以方便 `clj_emitter' 使用
+%% - 说明：核心代码从 Erlang/OTP 编译器应用的 `v3_core' 模块复制
 %% @doc Utility functions for processing patterns in the Clojerl
 %% emitter.
 %%

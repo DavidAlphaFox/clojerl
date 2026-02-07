@@ -1,4 +1,9 @@
-%% @doc Utility functions.
+%% @doc 工具函数模块
+%% @desc
+%% 功能: 提供Clojerl编译器和运行时所需的通用工具函数
+%%       包括数字解析、符号解析、字符分类、错误处理、
+%%       BEAM二进制操作、ETS表操作、堆栈跟踪格式化等
+%% 依赖: 无特殊依赖，为其他模块提供基础工具支持
 -module(clj_utils).
 
 -include("clojerl.hrl").

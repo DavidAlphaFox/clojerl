@@ -1,3 +1,10 @@
+%% @doc Clojure 多方法模块
+%% @desc
+%% - 功能：实现多方法的分发映射创建和更新
+%% - 功能：分发映射保存在独立的 BEAM 模块中，可在运行时独立更新
+%% - 功能：避免杀死当前使用分发映射模块的进程
+%% - 功能：对模块名进行名称修饰以避免使用无效文件名字符
+%% - 说明：此模块的代码仅应被 `clojure.core' 命名空间中的多方法相关函数使用
 %% @doc Clojure multimethod.
 %%
 %% Implements the creation and update of a multimethod's dispatch map.

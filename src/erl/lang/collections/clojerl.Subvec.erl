@@ -1,4 +1,7 @@
-%% @doc Subvector implementation.
+%% @doc 子向量实现
+%% @desc
+%% - 功能：提供向量的视图，支持访问原始向量的连续子范围而不复制数据
+%% - 依赖：IAssociative, ICounted, IColl, IEquiv, IEncodeErlang, IFn, IHash, ILookup, IMeta, IReduce, IReversible, IIndexed, ISequential, IStack, ISeqable, IStringable, IVector
 
 %% @private
 -module('clojerl.Subvec').

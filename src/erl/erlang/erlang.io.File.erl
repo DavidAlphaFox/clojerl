@@ -1,3 +1,9 @@
+%% @doc 文件输入输出模块
+%% @desc
+%% - 功能：提供文件的读写操作，支持打开、关闭、读取和写入文件
+%%   - 实现了 ICloseable、IReader、IWriter 协议
+%%   - 支持创建临时文件
+%%   - 提供路径管理功能
 -module('erlang.io.File').
 
 -include("clojerl.hrl").

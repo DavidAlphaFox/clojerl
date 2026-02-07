@@ -1,6 +1,13 @@
-%% @doc Clojerl compiler's entrypoint.
+%% @doc Clojerl 编译器的入口模块
 %%
-%% Provides functions to compile files, strings and forms.
+%% 提供编译文件、字符串和表达式的功能
+%% @desc
+%% 功能: 实现 Clojure 到 Erlang 的编译流程，包括词法分析、语法分析、代码生成和执行
+%% 依赖:
+%%   - clj_reader: 读取和解析 Clojure 源代码
+%%   - clj_analyzer: 分析和展开表达式
+%%   - clj_emitter: 生成 Erlang Core Erlang 代码
+%%   - clj_env: 管理编译环境和作用域
 -module(clj_compiler).
 
 -include("clojerl.hrl").

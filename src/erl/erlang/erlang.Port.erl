@@ -1,3 +1,7 @@
+%% @doc Erlang Port 类型的 Clojure 包装器
+%% @desc
+%% - 功能：为 Erlang port 提供 Clojure 接口，实现 IHash 和 IStringable 协议
+%% - 作用：使 Erlang port 可以在 Clojerl 环境中表示和使用
 -module('erlang.Port').
 
 -behavior('clojerl.IStringable').

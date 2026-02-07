@@ -1,3 +1,11 @@
+%% @doc Clojure Reader 条件读取数据结构
+%% @desc
+%% - 功能：实现 Clojure reader 的条件读取功能（Reader Conditional）
+%%   - 支持基于特性（feature）的条件表达式读取
+%%   - 支持拼接（splicing）和非拼接两种模式
+%%   - 提供 #? 语法糖用于条件编译
+%% - 用途：用于 Clojure 代码的条件编译和平台特定代码选择
+%% @end
 %% @private
 -module('clojerl.reader.ReaderConditional').
 

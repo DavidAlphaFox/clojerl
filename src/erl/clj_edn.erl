@@ -1,3 +1,8 @@
+%% @doc Clojerl EDN (可扩展数据表示) 解析器模块
+%% @desc
+%% - 功能：解析 EDN 格式的数据
+%% - 功能：支持从字符串或读取器读取数据结构
+%% - 功能：处理 Clojure 数据字面量（列表、向量、映射、集合等）
 %% @doc Clojerl EDN (Extensible Data Notation) parser.
 -module(clj_edn).
 

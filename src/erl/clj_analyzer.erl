@@ -1,3 +1,7 @@
+%% @doc Clojerl 代码分析器模块
+%% @desc
+%% - 功能：处理以数据结构形式表示的代码，将其转换为 AST 节点并推送到 `clj_env:env()' 中
+%% - 功能：实现宏展开功能
 %% @doc Clojerl analyzer.
 %%
 %% Processes code in the form of data structures and transform them

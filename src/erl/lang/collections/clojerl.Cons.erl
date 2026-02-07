@@ -1,3 +1,17 @@
+%% @doc Clojure Cons 单元模块
+%% @desc
+%% - 功能：实现 Cons 单元（一个元素加上一个序列）
+%% - 依赖：
+%%   - 'clojerl.IColl' - 集合协议
+%%   - 'clojerl.ICounted' - 计数协议
+%%   - 'clojerl.IEquiv' - 等值比较协议
+%%   - 'clojerl.IEncodeErlang' - Erlang 编码协议
+%%   - 'clojerl.IHash' - 哈希协议
+%%   - 'clojerl.IMeta' - 元数据协议
+%%   - 'clojerl.ISeq' - 序列协议
+%%   - 'clojerl.ISequential' - 顺序集合协议
+%%   - 'clojerl.ISeqable' - 可序列化协议
+%%   - 'clojerl.IStringable' - 字符串转换协议
 -module('clojerl.Cons').
 
 -include("clojerl.hrl").

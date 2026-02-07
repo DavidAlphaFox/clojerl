@@ -1,5 +1,10 @@
 %% @private
-%% @doc Clojerl OTP application.
+%% @doc Clojerl OTP应用模块
+%% @desc
+%% 功能: 实现OTP application行为，负责Clojerl应用的启动和初始化
+%%       包括启动supervisor、配置系统参数、创建默认命名空间、
+%%       加载用户配置等
+%% 依赖: 实现 application 行为
 -module(clojerl_app).
 
 -behavior(application).

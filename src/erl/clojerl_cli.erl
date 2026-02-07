@@ -1,5 +1,10 @@
 %% @private
-%% @doc Clojerl Command Line Interface.
+%% @doc Clojerl命令行接口模块
+%% @desc
+%% 功能: 提供Clojerl的命令行工具实现
+%%       支持编译Clojure文件、运行main函数、显示版本信息等
+%%       解析命令行参数并执行相应的操作
+%% 依赖: 依赖clojerl应用的启动和clj_compiler编译器
 -module(clojerl_cli).
 
 -include("clojerl_int.hrl").

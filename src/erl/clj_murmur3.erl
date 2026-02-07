@@ -1,3 +1,8 @@
+%% @doc Murmur3 哈希算法实现模块
+%% @desc
+%% - 功能：实现 Murmur3 非加密哈希算法
+%% - 功能：为有序和无序序列计算哈希值
+%% - 功能：提供集合哈希值混合计算功能
 %% @doc Murmur3 hash in Erlang.
 -module(clj_murmur3).
 

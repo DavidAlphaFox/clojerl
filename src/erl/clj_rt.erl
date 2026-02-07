@@ -1,8 +1,12 @@
-%% @doc General functions used during runtime.
+%% @doc Clojerl 运行时函数库
 %%
-%% This modules is analougous to the `clojure.lang.RT' class. The
-%% modules here are used in places where we can't yet rely on the
-%% `clojure.core' being there (e.g. {@link clj_reader}).
+%% 本模块类似于 Clojure 中的 `clojure.lang.RT' 类。
+%% 这些函数用于无法依赖 `clojure.core' 的地方（例如 {@link clj_reader}）
+%% @desc
+%% 功能: 提供运行时基础功能，包括类型检查、集合操作、类型转换、序列操作等
+%% 依赖:
+%%   - 各种 Clojerl 协议: ISeqable, ICounted, IAssociative, ILookup, IEquiv 等
+%%   - clojerl.Namespace: 命名空间管理
 -module(clj_rt).
 
 -dialyzer({nowarn_function, print/2}).

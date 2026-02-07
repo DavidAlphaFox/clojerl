@@ -1,4 +1,9 @@
 %% @private
+%% @doc Vector 的反向序列实现
+%% @desc
+%% - 功能：为 Vector 提供从末尾开始的反向序列视图，支持从后向前的遍历
+%% - 依赖：实现 ICounted, IColl, IEquiv, IEncodeErlang, IHash,
+%%         IMeta, ISequential, ISeqable, ISeq, IStringable 协议
 -module('clojerl.Vector.RSeq').
 
 -include("clojerl.hrl").

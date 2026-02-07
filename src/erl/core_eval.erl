@@ -1,8 +1,10 @@
-%% @doc An evaluator for Core Erlang abstract syntax.
-%%
-%% Parts of this module are heavily inspired in `erl_eval' and some
-%% helper functions (e.g. for binary matching and eval'ing) are copied
-%% directly from there.
+%% @doc Core Erlang抽象语法求值器
+%% @desc
+%% 功能: 提供Core Erlang AST的求值执行能力
+%%       支持模式匹配、函数调用、二进制操作、case表达式、
+%%       receive表达式、try-catch等Core Erlang特性
+%%       部分实现参考了erl_eval模块
+%% 依赖: 使用cerl模块处理Core Erlang AST
 -module(core_eval).
 
 -export([ exprs/1

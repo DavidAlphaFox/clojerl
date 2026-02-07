@@ -1,7 +1,13 @@
-%% @doc Clojerl reader.
+%% @doc Clojerl 读取器模块
 %%
-%% Reads an input string (or {@link 'erlang.io.IPushbackReader'}) and
-%% returns a Clojerl form.
+%% 从输入字符串（或 {@link 'erlang.io.IPushbackReader'}）读取并返回 Clojure 表达式
+%% @desc
+%% 功能: 实现 Clojure 语言的词法分析和语法解析，包括读取字面量、集合、宏字符等
+%% 依赖:
+%%   - clj_env: 管理读取环境
+%%   - clj_rt: 运行时函数库
+%%   - clj_utils: 工具函数
+%%   - clj_analyzer: 语法分析器（用于 syntax-quote）
 -module(clj_reader).
 
 -include("clojerl.hrl").

@@ -1,3 +1,7 @@
+%% @doc 函数参数数量错误异常模块
+%% @desc
+%% - 功能：当调用函数时传递的参数数量不正确时抛出此异常
+%% - 记录实际参数数量和函数名称，用于诊断参数数量匹配问题
 -module('clojerl.ArityError').
 
 -include("clojerl.hrl").

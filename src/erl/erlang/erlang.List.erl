@@ -1,3 +1,7 @@
+%% @doc Erlang 列表类型的 Clojure 包装器
+%% @desc
+%% - 功能：为 Erlang 列表提供完整的 Clojure 集合接口，实现多个协议
+%% - 作用：使 Erlang 列表可以在 Clojerl 环境中作为序列、集合、栈等使用
 -module('erlang.List').
 
 -include("clojerl.hrl").

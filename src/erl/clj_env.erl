@@ -1,16 +1,19 @@
-%% @doc Clojerl compilation environment.
+%% @doc Clojerl 编译环境管理模块
 %%
-%% `clj_env:env()' holds the information for the current compilation
-%% environment. It is used by all the compilation stages: the
-%% `clj_reader', the `clj_analyzer' and the `clj_emitter'.
+%% `clj_env:env()' 保存当前编译环境的信息。它被所有编译阶段使用：
+%% `clj_reader'（读取器）、`clj_analyzer'（分析器）和 `clj_emitter'（代码生成器）
 %%
-%% Some examples of the information it keeps are:
+%% 保存的信息包括：
 %% <ul>
-%%   <li>Local variables available in the current scope.</li>
-%%   <li>Current location in the file or string being processed.</li>
-%%   <li>Stack of expressions added by the `clj_analyzer'.</li>
-%%   <li>... and more.</li>
+%%   <li>当前作用域中可用的局部变量</li>
+%%   <li>正在处理的文件或字符串中的当前位置</li>
+%%   <li>由 `clj_analyzer' 添加的表达式栈</li>
+%%   <li>... 以及更多</li>
 %% </ul>
+%% @desc
+%% 功能: 管理编译过程中的环境状态，包括变量作用域、表达式栈、位置信息等
+%% 依赖:
+%%   - clj_scope: 提供嵌套作用域的实现
 -module(clj_env).
 
 -include("clojerl.hrl").

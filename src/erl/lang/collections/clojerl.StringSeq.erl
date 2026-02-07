@@ -1,5 +1,7 @@
-%% @doc Wraps a string providing an implementation for collection and
-%% seq related protocols.
+%% @doc 字符串序列实现
+%% @desc
+%% - 功能：将字符串包装为序列，提供字符级别的序列操作接口
+%% - 依赖：ICounted, IColl, IEquiv, IHash, IReduce, ISeq, ISeqable, ISequential, IStringable
 
 %% @private
 -module('clojerl.StringSeq').

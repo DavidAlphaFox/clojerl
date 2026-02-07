@@ -24,6 +24,10 @@
 %% POSSIBILITY OF SUCH DAMAGE.
 
 %% @doc Dictionary implementation using a red-black tree.
+%% @desc
+%% - 功能：基于红黑树的字典实现，提供高效的键值存储和有序遍历
+%% - 特性：支持自定义比较函数、O(log n)的查找/插入/删除操作
+%% - 依赖：无外部协议依赖
 %% @private
 -module(rbdict).
 

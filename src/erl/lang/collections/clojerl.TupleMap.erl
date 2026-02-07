@@ -1,3 +1,20 @@
+%% @doc Clojure 元组映射模块
+%% @desc
+%% - 功能：实现基于元组的小型不可变映射表，适用于元素数量较少的场景（阈值16）
+%% - 依赖：
+%%   - 'clojerl.IAssociative' - 关联协议
+%%   - 'clojerl.ICounted' - 计数协议
+%%   - 'clojerl.IColl' - 集合协议
+%%   - 'clojerl.IEquiv' - 等值比较协议
+%%   - 'clojerl.IEncodeErlang' - Erlang 编码协议
+%%   - 'clojerl.IFn' - 函数协议，映射可作为函数查找值
+%%   - 'clojerl.IHash' - 哈希协议
+%%   - 'clojerl.IKVReduce' - 键值归约协议
+%%   - 'clojerl.ILookup' - 查找协议
+%%   - 'clojerl.IMap' - 映射协议（支持 keys/vals/without）
+%%   - 'clojerl.IMeta' - 元数据协议
+%%   - 'clojerl.ISeqable' - 可序列化协议
+%%   - 'clojerl.IStringable' - 字符串转换协议
 -module('clojerl.TupleMap').
 
 -compile({no_auto_import, [{apply, 2}]}).

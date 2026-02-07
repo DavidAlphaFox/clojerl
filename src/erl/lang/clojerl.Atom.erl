@@ -1,3 +1,10 @@
+%% @doc Atom 模块 - 提供可变的同步状态容器
+%% @desc
+%% - 功能：实现 Clojure 的 Atom 类型，提供线程安全的可变状态管理。支持原子性的
+%%   状态更新、比较并设置（compare-and-set）操作，以及通过函数更新值的功能。
+%%   使用 gen_server 和 ETS 表实现状态的并发访问控制。
+%% - 依赖：实现 'clojerl.IDeref', 'clojerl.IEquiv', 'clojerl.IHash',
+%%   'clojerl.IMeta', 'clojerl.IStringable' 协议
 -module('clojerl.Atom').
 
 -include("clojerl.hrl").

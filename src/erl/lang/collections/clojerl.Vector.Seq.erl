@@ -1,4 +1,9 @@
 %% @private
+%% @doc Vector 的标准序列实现
+%% @desc
+%% - 功能：为 Vector 提供标准的序列视图，支持从前往后的顺序遍历和访问
+%% - 依赖：实现 ICounted, IColl, IEquiv, IEncodeErlang, IHash,
+%%         IMeta, IReduce, ISeq, ISequential, ISeqable, IStringable 协议
 -module('clojerl.Vector.Seq').
 
 -include("clojerl.hrl").

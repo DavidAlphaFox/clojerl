@@ -1,3 +1,7 @@
+%% @doc 重复序列实现
+%% @desc
+%% - 功能：创建一个重复指定值的无限或有限序列，用于生成包含重复元素的惰性序列
+%% - 依赖：ICounted, IColl, IEquiv, IHash, IMeta, IReduce, ISeq, ISeqable, ISequential, IStringable
 -module('clojerl.Repeat').
 
 -include("clojerl.hrl").

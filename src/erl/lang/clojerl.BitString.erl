@@ -1,3 +1,9 @@
+%% @doc BitString 模块 - Erlang 二进制串的 Clojure 接口
+%% @desc
+%% - 功能：为 Erlang 的 bitstring 类型提供 Clojure 协议实现，支持计数、哈希、
+%%   序列化和字符串表示等功能。将 Erlang 原生二进制串集成到 Clojerl 类型系统中。
+%% - 依赖：实现 'clojerl.ICounted', 'clojerl.IHash', 'clojerl.ISequential',
+%%   'clojerl.ISeqable', 'clojerl.IStringable' 协议
 -module('clojerl.BitString').
 
 -include("clojerl.hrl").

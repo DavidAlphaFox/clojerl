@@ -1,3 +1,8 @@
+%% @doc 哈希冲突处理模块
+%% @desc
+%% - 功能：处理数据结构中的哈希冲突问题
+%% - 功能：为 Clojure 映射和集合等数据结构提供冲突处理工具函数
+%% - 功能：管理具有相同哈希值的条目
 %% @doc Hash collision handling for data structures.
 %%
 %% Implements utility functions for dealing with the collision of

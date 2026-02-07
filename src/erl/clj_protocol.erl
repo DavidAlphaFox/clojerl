@@ -1,4 +1,8 @@
-%% @doc Clojerl protocol helper functions.
+%% @doc Clojerl 协议辅助函数模块
+%% @desc
+%% 功能: 提供 Clojure 协议（Protocol）系统的辅助功能，包括实现模块命名和错误处理
+%% 依赖:
+%%   - clj_rt: 运行时类型检查和错误报告
 -module(clj_protocol).
 
 -include("clojerl_int.hrl").

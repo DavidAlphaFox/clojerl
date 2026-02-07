@@ -1,3 +1,9 @@
+%% @doc 字符串读取器实现
+%% @desc
+%% - 功能：实现从字符串读取数据的读取器
+%%   - 从二进制字符串读取字符和数据
+%%   - 实现 IO 服务器协议以支持 Erlang IO 操作
+%%   - 支持读取字符、行和跳过操作
 -module('erlang.io.StringReader').
 
 -include("clojerl.hrl").

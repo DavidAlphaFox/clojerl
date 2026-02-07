@@ -1,15 +1,11 @@
-%% @doc Clojure's persistent vector implementation in Erlang.
+%% @doc Clojure持久化向量数据结构的Erlang实现
+%% @desc
+%% 功能: 实现Clojure JVM中的持久化向量数据结构
+%%       该数据结构提供了高效的O(log32 n)访问和更新性能
+%%       使用32路分支的树状结构实现，支持持久化(不可变)语义
+%% 依赖: 无特殊行为依赖，为独立的数据结构实现
 %%
-%% This is an implementation of the persistent vector data structure
-%% found in Clojure JVM. A very nice series of posts explaining in
-%% detail the Clojure vector implementation can be found <a
-%% href="https://hypirion.com/musings/understanding-persistent-vector-pt-1">
-%% here</a>.
-%%
-%% The goal of implementing this data structure in Erlang was to
-%% compare its performance to the one provided by the `array' module.
-%% The results of the comparison can be found <a
-%% href="https://github.com/clojerl/clojerl/pull/629">here</a>.
+%% 详见: https://hypirion.com/musings/understanding-persistent-vector-pt-1
 -module(clj_vector).
 
 -include("clojerl.hrl").

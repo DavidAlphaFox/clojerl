@@ -1,8 +1,10 @@
-%% @doc Nested scopes.
+%% @doc 嵌套作用域实现模块
 %%
-%% Implements nested scopes through nested maps. This is heavily used
-%% in all throughout the compilation process, from the reader to the
-%% emitter.
+%% 通过嵌套映射实现嵌套作用域。这在整个编译过程中被大量使用，
+%% 从读取器到代码生成器都依赖它
+%% @desc
+%% 功能: 实现分层作用域管理，支持变量查找、更新和继承，用于符号解析和变量绑定
+%% 依赖: 无（纯数据结构实现）
 -module(clj_scope).
 
 -include("clojerl.hrl").
