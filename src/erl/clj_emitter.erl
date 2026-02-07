@@ -138,14 +138,23 @@ ast(#{op := def} = Expr, State) ->
                      true  -> InitAst0;
                      false ->
                       Init = clj_compiler:eval_expressions([InitAst0]),
-                      ?ERROR_WHEN( not cerl:is_literal_term(Init)
-                                 , [ <<"Init value for ">>, Var
-                                   , <<" is not a literal: ">>
-                                   , Init
-                                   ]
-                                 , clj_env:location(Env)
-                                 ),
-                      cerl:abstract(Init)
+                      case clj_rt:'regex?'(Init) of
+                        true ->
+                          %% For regex literals, extract the pattern and generate
+                          %% a constructor call instead of trying to make it a literal
+                          Pattern = maps:get(pattern, Init),
+                          call_mfa('erlang.util.Regex', ?CONSTRUCTOR,
+                                   [cerl:abstract(Pattern)], ann_from(Env));
+                        false ->
+                          ?ERROR_WHEN( not cerl:is_literal_term(Init)
+                                     , [ <<"Init value for ">>, Var
+                                       , <<" is not a literal: ">>
+                                       , Init
+                                       ]
+                                     , clj_env:location(Env)
+                                     ),
+                          cerl:abstract(Init)
+                      end
                   end,
         {InitAst, StateTemp}
     end,
