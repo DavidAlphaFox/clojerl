@@ -6,31 +6,9 @@
 ;   the terms of this license.
 ;   You must not remove this notice, or any other, from this software.
 
-(ns ^{:doc "Clojure String utilities
-
-It is poor form to (:use clojure.string). Instead, use require
-with :as to specify a prefix, e.g.
-
-(ns your.namespace.here
-  (:require [clojure.string :as str]))
-
-Design notes for clojure.string:
-
-1. Strings are Erlang binaries (as opposed to sequences). As such, the
-   string being manipulated is the first argument to a function;
-   passing nil will result in an error unless documented otherwise.
-   If you want sequence-y behavior instead, use a sequence.
-
-2. Functions are generally not lazy, and call straight to host
-   methods where those are available and efficient.
-
-3. Functions take advantage of String implementation details to
-   write high-performing loop/recurs instead of using higher-order
-   functions. (This is not idiomatic in general-purpose application
-   code.)"
+(ns ^{:doc "Clojure String utilities"
       :author "Stuart Sierra, Stuart Halloway, David Liebke"}
-  clojure.string
-  (:refer-clojure :exclude (replace reverse)))
+  clojure.string)
 
 (set! *warn-on-infer* true)
 
@@ -97,7 +75,7 @@ Design notes for clojure.string:
   [^clojerl.IStringable s match replacement]
   (let [^clojerl.String s (.str s)
         replace erlang.util.Regex/replace.4
-        opts #erl(:global)]
+        opts #erl []]
     (cond
       (string? match) (.replace ^clojerl.String s match replacement)
       (regex? match) (if (or (string? replacement)
@@ -157,7 +135,7 @@ Design notes for clojure.string:
   [^clojerl.IStringable s match replacement]
   (let [^clojerl.String s (.str s)
         replace erlang.util.Regex/replace.4
-        opts #erl ()]
+        opts #erl []]
     (cond
       (or (string? match)
           (instance? erlang.io.StringWriter match))
@@ -192,7 +170,7 @@ Design notes for clojure.string:
 
 (defn ^clojerl.String capitalize
   "Converts first character of the string to upper-case, all other
-  characters to lower-case."
+   characters to lower-case."
   {:added "1.2"}
   [^clojerl.IStringable s]
   (let [^clojerl.String s (.str s)]
@@ -207,9 +185,10 @@ Design notes for clojure.string:
   the maximum number of splits. Not lazy. Returns vector of the splits."
   {:added "1.2"}
   ([^clojerl.IStringable s ^erlang.util.Regex re]
-   (vec (.split re (.str s) #erl (:trim))))
+   (let [result (vec (.split re (.str s) #erl []))]
+     (vec (filter #(not (= % "")) result))))
   ([^clojerl.IStringable s ^erlang.util.Regex re limit]
-   (vec (.split re (.str s) #erl(:trim :global #erl [:match_limit limit])))))
+   (vec (.split re (.str s) #erl []))))
 
 (defn split-lines
   "Splits s on \\n or \\r\\n."
@@ -262,7 +241,7 @@ Design notes for clojure.string:
 
 (defn ^clojerl.String trim-newline
   "Removes all trailing newline \\n or return \\r characters from
-  string.  Similar to Perl's chomp."
+   string.  Similar to Perl's chomp."
   {:added "1.2"}
   [^clojerl.IStringable s]
   (let [^clojerl.String s (.str s)]

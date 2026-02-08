@@ -57,8 +57,10 @@ quote(Regex) when is_binary(Regex) ->
 -spec split(type(), binary(), [term()]) -> [binary()].
 split(Regex, Str, Opts) when is_binary(Regex) ->
   split(?CONSTRUCTOR(Regex), Str, Opts);
-split(#{?TYPE := ?M, regex := Regex}, Str, Opts) ->
-  re:split(Str, Regex, Opts).
+split(#{?TYPE := ?M, regex := Regex}, Str, Opts) when is_list(Opts) ->
+  re:split(Str, Regex, [{return, binary} | Opts]);
+split(#{?TYPE := ?M, regex := Regex}, Str, _) ->
+  re:split(Str, Regex, [{return, binary}]).
 
 %%------------------------------------------------------------------------------
 %% Protocols

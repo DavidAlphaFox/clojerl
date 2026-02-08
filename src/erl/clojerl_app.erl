@@ -67,8 +67,12 @@ init() ->
 
       ClojureCoreServerSym = clj_rt:symbol(<<"clojure.core.server">>),
       'clojure.core':require([ClojureCoreServerSym]),
-      'clojure.core.server':'start-servers'(clj_utils:env_vars()),
-      ok;
+      try
+        'clojure.core.server':'start-servers'(clj_utils:env_vars()),
+        ok
+      catch
+        _:_ -> ok
+      end;
     false ->
       ok
   end.
